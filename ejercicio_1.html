@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Convertidor de Sistemas de Referencia</title>
+    <link rel="stylesheet" href="./css/estilos.css">
+</head>
+<body>
+    <h1>Transformador de coordenadas</h1>
+    <h3>Elaborado por Jeison Alberto Tantachuco Roman</h3>
+    <p>El transformador de coordenadas múltiple necesita como <b>input</b>, pares de coordenadas (X,Y) entre estas debe haber un espacio de separación (X1 Y1 X2 Y2).</p>
+    Entrada:     
+    <select id="EPSGEntrada">
+        <option selected>EPSG:23030</option>
+        <option>EPSG:23031</option>
+    </select>
+    <br/>
+    Longitud, Latitud: <textarea id="entradaXY">495609.69832 4624136.85418 495600.69832 4624130.85418</textarea>
+    <br/>
+    <br/>
+    Salida:
+    <select id="EPSGSalida">
+        <option selected>EPSG:4326</option>
+        <option>EPSG:23030</option>
+        <option>EPSG:23031</option>
+    </select>
+    <br/>
+    <input type="button" value="Calcula" onclick="coordenadaMultiple();">
+    <div id="salida" value=""></div>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.10.0/proj4.js">
+    </script>
+    <script type="text/javascript" src="./js/proj4js/defs.js"></script>
+    <script type="text/javascript" src="./js/coordenada_multiple.js"></script>
+    <script type="text/javascript" src="./js/transformar_coordenada.js"></script>
+</body>
+</html>
